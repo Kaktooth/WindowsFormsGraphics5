@@ -54,6 +54,8 @@ namespace WindowsFormsGraphics5
             this.label11 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.textBox8 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar3)).BeginInit();
@@ -208,7 +210,7 @@ namespace WindowsFormsGraphics5
             // trackBar3
             // 
             this.trackBar3.LargeChange = 1;
-            this.trackBar3.Location = new System.Drawing.Point(1252, 387);
+            this.trackBar3.Location = new System.Drawing.Point(1246, 387);
             this.trackBar3.Maximum = 360;
             this.trackBar3.Minimum = -360;
             this.trackBar3.Name = "trackBar3";
@@ -245,7 +247,7 @@ namespace WindowsFormsGraphics5
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(1255, 449);
+            this.checkBox1.Location = new System.Drawing.Point(1258, 622);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(129, 21);
             this.checkBox1.TabIndex = 24;
@@ -279,11 +281,29 @@ namespace WindowsFormsGraphics5
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(1265, 446);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(52, 17);
+            this.label12.TabIndex = 29;
+            this.label12.Text = "LampZ";
+            // 
+            // textBox8
+            // 
+            this.textBox8.Location = new System.Drawing.Point(1330, 446);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(100, 22);
+            this.textBox8.TabIndex = 31;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1511, 683);
+            this.Controls.Add(this.textBox8);
+            this.Controls.Add(this.label12);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.checkBox1);
@@ -347,6 +367,8 @@ namespace WindowsFormsGraphics5
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox textBox8;
     }
 }
 
