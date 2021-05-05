@@ -222,10 +222,12 @@ points3D1.X * points3D3.Y - points3D2.X * points3D3.Y - points3D1.X * points3D2.
                 else
                 { 
                     View3D.Point3D n = View3D.CalcNormal(pyramidPoints[3], pyramidPoints[0], pyramidPoints[1]);
-                    if (n.Z * dist + n.X * pyramidPoints[3].X + n.Y * pyramidPoints[3].Y + n.Z * pyramidPoints[3].Z > 0)
+                    if (n.Z * dist + n.X * pyramidPoints[3].X + n.Y * pyramidPoints[3].Y + n.Z * pyramidPoints[3].Z > 0&& n.Z * dist + n.X * pyramidPoints[0].X + n.Y * pyramidPoints[0].Y + n.Z * pyramidPoints[0].Z > 0
+                        && n.Z * dist + n.X * pyramidPoints[1].X + n.Y * pyramidPoints[1].Y + n.Z * pyramidPoints[1].Z > 0)
                     {
                         //1
-                        var s = Math.Abs(n.X * button2.Location.X+ n.Y * button2.Location.Y + n.X * pyramidPoints[3].X + n.Y * pyramidPoints[3].Y + n.Z * pyramidPoints[3].Z);
+                        var s = Math.Abs((n.X * button2.Location.X+ n.Y * button2.Location.Y + n.X * pyramidPoints[3].X + n.Y * pyramidPoints[3].Y + n.Z * pyramidPoints[3].Z)+( n.Z * dist + n.X * pyramidPoints[0].X + n.Y * pyramidPoints[0].Y + n.Z * pyramidPoints[0].Z)+
+                             n.Z * dist + n.X * pyramidPoints[1].X + n.Y * pyramidPoints[1].Y + n.Z * pyramidPoints[1].Z);
                         Color c = new Color();
                         s = (s - 0) / (25500 - 0);
                         if (s < 255)
@@ -244,9 +246,11 @@ points3D1.X * points3D3.Y - points3D2.X * points3D3.Y - points3D1.X * points3D2.
                         g.DrawLine(p, point3D[3].X, point3D[3].Y, point3D[1].X, point3D[1].Y);
                     }
                     n = View3D.CalcNormal(pyramidPoints[5], pyramidPoints[0], pyramidPoints[3]);
-                    if (n.Z * dist + n.X * pyramidPoints[5].X + n.Y * pyramidPoints[5].Y + n.Z * pyramidPoints[5].Z > 0)
+                    if (n.Z * dist + n.X * pyramidPoints[5].X + n.Y * pyramidPoints[5].Y + n.Z * pyramidPoints[5].Z > 0&& n.Z * dist + n.X * pyramidPoints[0].X + n.Y * pyramidPoints[0].Y + n.Z * pyramidPoints[0].Z > 0
+                        && n.Z * dist + n.X * pyramidPoints[3].X + n.Y * pyramidPoints[3].Y + n.Z * pyramidPoints[3].Z > 0)
                     {
-                        var s = Math.Abs(n.X * button2.Location.X + n.Y * button2.Location.Y + n.X * pyramidPoints[3].X + n.Y * pyramidPoints[3].Y + n.Z * pyramidPoints[3].Z);
+                        var s = Math.Abs((n.X * button2.Location.X + n.Y * button2.Location.Y + n.X * pyramidPoints[5].X + n.Y * pyramidPoints[5].Y + n.Z * pyramidPoints[5].Z)+(n.Z * dist + n.X * pyramidPoints[0].X + n.Y * pyramidPoints[0].Y + n.Z * pyramidPoints[0].Z)+
+                                       n.Z * dist + n.X * pyramidPoints[3].X + n.Y * pyramidPoints[3].Y + n.Z * pyramidPoints[3].Z);
                         Color c = new Color();
                         s = (s - 0) / (25500 - 0);
                         if (s < 255)
@@ -266,9 +270,11 @@ points3D1.X * points3D3.Y - points3D2.X * points3D3.Y - points3D1.X * points3D2.
                     }
 
                     n = View3D.CalcNormal(pyramidPoints[5], pyramidPoints[3], pyramidPoints[1]);
-                    if (n.Z * dist + n.X * pyramidPoints[5].X + n.Y * pyramidPoints[5].Y + n.Z * pyramidPoints[5].Z > 0)
+                    if (n.Z * dist + n.X * pyramidPoints[5].X + n.Y * pyramidPoints[5].Y + n.Z * pyramidPoints[5].Z > 0&& n.Z * dist + n.X * pyramidPoints[3].X + n.Y * pyramidPoints[3].Y + n.Z * pyramidPoints[3].Z > 0
+                        && n.Z * dist + n.X * pyramidPoints[1].X + n.Y * pyramidPoints[1].Y + n.Z * pyramidPoints[1].Z > 0)
                     {
-                        var s = Math.Abs(n.X * button2.Location.X + n.Y * button2.Location.Y + n.X * pyramidPoints[3].X + n.Y * pyramidPoints[3].Y + n.Z * pyramidPoints[3].Z);
+                        var s = Math.Abs(n.X * button2.Location.X + n.Y * button2.Location.Y + n.X * pyramidPoints[5].X + n.Y * pyramidPoints[5].Y + n.Z * pyramidPoints[5].Z+( n.Z * dist + n.X * pyramidPoints[3].X + n.Y * pyramidPoints[3].Y + n.Z * pyramidPoints[3].Z)+
+                           n.Z * dist + n.X * pyramidPoints[1].X + n.Y * pyramidPoints[1].Y + n.Z * pyramidPoints[1].Z);
                         Color c = new Color();
                         s = (s - 0) / (25500 - 0);
                         if (s < 255)
@@ -289,9 +295,11 @@ points3D1.X * points3D3.Y - points3D2.X * points3D3.Y - points3D1.X * points3D2.
                     }
 
                     n = View3D.CalcNormal(pyramidPoints[5], pyramidPoints[1], pyramidPoints[0]);
-                    if (n.Z * dist + n.X * pyramidPoints[5].X + n.Y * pyramidPoints[5].Y + n.Z * pyramidPoints[5].Z > 0)
+                    if (n.Z * dist + n.X * pyramidPoints[5].X + n.Y * pyramidPoints[5].Y + n.Z * pyramidPoints[5].Z > 0 && n.Z* dist +n.X * pyramidPoints[1].X + n.Y * pyramidPoints[1].Y + n.Z * pyramidPoints[1].Z > 0
+                        && n.Z * dist + n.X * pyramidPoints[0].X + n.Y * pyramidPoints[0].Y + n.Z * pyramidPoints[0].Z > 0)
                     {
-                        var s = Math.Abs(n.X * button2.Location.X + n.Y * button2.Location.Y + n.X * pyramidPoints[3].X + n.Y * pyramidPoints[3].Y + n.Z * pyramidPoints[3].Z);
+                        var s = Math.Abs(n.X * button2.Location.X + n.Y * button2.Location.Y + n.X * pyramidPoints[5].X + n.Y * pyramidPoints[5].Y + n.Z * pyramidPoints[5].Z+(n.Z * dist + n.X * pyramidPoints[1].X + n.Y * pyramidPoints[1].Y + n.Z * pyramidPoints[1].Z)+
+                            n.Z * dist + n.X * pyramidPoints[0].X + n.Y * pyramidPoints[0].Y + n.Z * pyramidPoints[0].Z);
                         Color c = new Color();
                         s = (s - 0) / (25500 - 0);
                         if (s < 255)

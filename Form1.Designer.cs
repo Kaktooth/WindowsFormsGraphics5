@@ -51,7 +51,6 @@ namespace WindowsFormsGraphics5
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.label11 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -248,20 +247,10 @@ namespace WindowsFormsGraphics5
             this.checkBox1.AutoSize = true;
             this.checkBox1.Location = new System.Drawing.Point(1255, 449);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(63, 21);
+            this.checkBox1.Size = new System.Drawing.Size(129, 21);
             this.checkBox1.TabIndex = 24;
-            this.checkBox1.Text = "Filled";
+            this.checkBox1.Text = "Filled + Shadow";
             this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(1255, 476);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(96, 21);
-            this.checkBox2.TabIndex = 25;
-            this.checkBox2.Text = "Shadowed";
-            this.checkBox2.UseVisualStyleBackColor = true;
             // 
             // label11
             // 
@@ -297,7 +286,6 @@ namespace WindowsFormsGraphics5
             this.ClientSize = new System.Drawing.Size(1511, 683);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.checkBox2);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label10);
@@ -357,7 +345,6 @@ namespace WindowsFormsGraphics5
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button button2;
     }
